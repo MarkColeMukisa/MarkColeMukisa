@@ -1,6 +1,6 @@
 # Hi, I'm Mark Cole Mukisa 👋
 
-### Software Developer | Web & Mobile Developer | Problem Solver
+### Software Engineer | Web & Mobile Developer | Problem Solver
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2563eb,100:06b6d4&height=180&section=header&text=Welcome%20to%20my%20profile&fontSize=35&fontColor=ffffff" />
@@ -8,11 +8,11 @@
 
 ## About Me
 
-- 🔭 I’m currently working on interesting software projects
+- 🔭 I solve business problems for East African businesses with software and an AI layer.
 - 🌱 I’m learning and improving my development skills
 - 💬 Ask me about web development, mobile apps, and programming
 - 📍 Based in Uganda
-- 📫 Contact me: `your-email@example.com`
+- 📫 Contact me: `markcole683@gmail.com`
 
 ## Technologies I Use
 
