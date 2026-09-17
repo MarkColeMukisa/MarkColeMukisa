@@ -7,7 +7,7 @@ from xml.sax.saxutils import escape
 
 # ---------------------------------------------------------------- CONTENT ---
 
-HANDLE = "mark@kianrover"
+HANDLE = "mark@markcole.dev"
 
 LOGO = [
     "███╗   ███╗ ██████╗",
@@ -20,35 +20,31 @@ LOGO = [
     "Mukisa Mark Cole",
     "─────────────────",
     "Software Engineer",
-    "Co-founder · CTO",
+    "Business Systems · AI Automation",
     "Uganda 🇺🇬",
+    
 ]
 
 # None = blank spacer row, str = section heading, (key, value) = info row.
 ROWS = [
-    ("OS", "Windows · Linux"),
-    ("Uptime", "Shipping since 2023"),
-    ("Host", "Kian Rover & Co. Investments · Co-founder"),
-    ("Role", "CTO @ IKIPS OBS & OGS"),
-    ("Mission", "business software + an AI layer"),
-    None,
-    ("Frontend", "React · Livewire 3 · Alpine.js · Inertia"),
-    ("Styling", "Tailwind CSS · Flux UI · Blade"),
-    ("Backend", "Laravel · PHP · Grit"),
+    ("Focus", "business systems + AI automation"),
+    ("Backend", "Laravel"),
+    ("Frontend", "React"),
     ("Data", "PostgreSQL · MySQL · Redis"),
-    ("Infra", "Laravel Cloud · Vercel · Docker"),
-    ("AI", "Laravel AI SDK · AI agents"),
+    ("Deploy", "Laravel Cloud · Vercel · Docker"),
+    ("Based", "Uganda · East Africa"),
     None,
     "Building",
-    ("IKIPS", "savings platform · KYC · live analytics"),
-    ("Kian Rover", "consulting · internship pipeline"),
-    ("Portfolio", "\"Ask my AI\" assistant · markcole.dev"),
-    ("ShopHub", "React ecommerce · cart → checkout"),
+    ("Larex POS", "POS + ecommerce · inventory · sales"),
+    ("GETA", "water billing · tenant bills · SMS"),
+    ("IKIPS", "savings platform · KYC · analytics"),
+    ("Portfolio", "AI knowledge assistant · markcole.dev"),
     None,
     "Services",
-    ("Systems", "POS · Inventory · CRM · School systems"),
-    ("Automation", "AI assistants · documents · workflows"),
+    ("Business Systems", "POS · Inventory · CRM · Dashboards"),
+    ("AI Automation", "AI assistants · RAG · workflows"),
     ("Integrations", "Payments · SMS · Email · APIs"),
+    ("Custom Software", "Internal tools · portals · web apps"),
     None,
     "Contact",
     ("Email", "markcole683@gmail.com"),
@@ -58,12 +54,12 @@ ROWS = [
 ]
 
 MANIFESTO = [
-    "// I solve business problems for East African businesses —",
-    "// with software and an AI layer.",
-    "// maintainable code, fast experiences, products people love to use.",
+    "// I build software for real business problems —",
+    "// business systems, AI automation, and integrations.",
+    "// Built for East Africa. Designed to scale beyond it.",
 ]
 
-PROMPT = ("mark@kianrover", "building for East Africa — software + an AI layer.")
+PROMPT = ("markcole.dev", "have a business problem? let's build the solution.")
 
 # ----------------------------------------------------------------- THEMES ---
 
