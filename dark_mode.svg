@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1040px" height="656px" font-family="'JetBrains Mono','Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="15px">
+<svg xmlns="http://www.w3.org/2000/svg" width="1040px" height="756px" font-family="'JetBrains Mono','Cascadia Code','Consolas','SFMono-Regular',ui-monospace,monospace" font-size="15px">
 <defs>
 <linearGradient id="shine-dark" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
   <stop offset="0" stop-color="#2DD4BF"/>
@@ -22,20 +22,20 @@
 .ascii{fill:url(#shine-dark);font-weight:700}
 text,tspan{white-space:pre}
 </style>
-<rect width="1040px" height="656px" fill="#0D1117" rx="12"/>
+<rect width="1040px" height="756px" fill="#0D1117" rx="12"/>
 <text class="ascii">
-<tspan x="40" y="164">███╗   ███╗ ██████╗</tspan>
-<tspan x="40" y="184">████╗ ████║██╔════╝</tspan>
-<tspan x="40" y="204">██╔████╔██║██║     </tspan>
-<tspan x="40" y="224">██║╚██╔╝██║██║     </tspan>
-<tspan x="40" y="244">██║ ╚═╝ ██║╚██████╗</tspan>
-<tspan x="40" y="264">╚═╝     ╚═╝ ╚═════╝</tspan>
-<tspan x="40" y="284"></tspan>
-<tspan x="40" y="304">Mukisa Mark Cole</tspan>
-<tspan x="40" y="324">─────────────────</tspan>
-<tspan x="40" y="344">Software Engineer</tspan>
-<tspan x="40" y="364">Business Systems · AI Automation</tspan>
-<tspan x="40" y="384">Uganda 🇺🇬</tspan>
+<tspan x="40" y="214">███╗   ███╗ ██████╗</tspan>
+<tspan x="40" y="234">████╗ ████║██╔════╝</tspan>
+<tspan x="40" y="254">██╔████╔██║██║     </tspan>
+<tspan x="40" y="274">██║╚██╔╝██║██║     </tspan>
+<tspan x="40" y="294">██║ ╚═╝ ██║╚██████╗</tspan>
+<tspan x="40" y="314">╚═╝     ╚═╝ ╚═════╝</tspan>
+<tspan x="40" y="334"></tspan>
+<tspan x="40" y="354">Mukisa Mark Cole</tspan>
+<tspan x="40" y="374">─────────────────</tspan>
+<tspan x="40" y="394">Software Engineer</tspan>
+<tspan x="40" y="414">Business Systems · AI Automation</tspan>
+<tspan x="40" y="434">Uganda 🇺🇬</tspan>
 </text>
 <text fill="#E6EDF3">
 <tspan x="400" y="34"><tspan class="hd">mark@markcole.dev</tspan> <tspan class="cur">▊<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></tspan> <tspan class="rule">───────────────────────────────────────</tspan></tspan>
@@ -63,10 +63,15 @@ text,tspan{white-space:pre}
 <tspan x="400" y="474"><tspan class="dot">. </tspan><tspan class="key">Portfolio</tspan><tspan class="col">: </tspan><tspan class="dot">..... </tspan><tspan class="val">markcole.dev</tspan></tspan>
 <tspan x="400" y="494"><tspan class="dot">. </tspan><tspan class="key">X</tspan><tspan class="col">: </tspan><tspan class="dot">............. </tspan><tspan class="val">@MarkColeMUKISA</tspan></tspan>
 <tspan x="400" y="514"><tspan class="dot">. </tspan><tspan class="key">GitHub</tspan><tspan class="col">: </tspan><tspan class="dot">........ </tspan><tspan class="val">MarkColeMukisa</tspan></tspan>
+<tspan x="400" y="534" class="dot"> </tspan>
+<tspan x="400" y="554"><tspan class="hd">GitHub Stats</tspan> <tspan class="rule">──────────────────────────────────────────────</tspan></tspan>
+<tspan x="400" y="574"><tspan class="dot">. </tspan><tspan class="key">Repos</tspan><tspan class="col">: </tspan><tspan class="dot">......... </tspan><tspan class="val">79</tspan></tspan>
+<tspan x="400" y="594"><tspan class="dot">. </tspan><tspan class="key">Stars</tspan><tspan class="col">: </tspan><tspan class="dot">......... </tspan><tspan class="val">2</tspan></tspan>
+<tspan x="400" y="614"><tspan class="dot">. </tspan><tspan class="key">Followers</tspan><tspan class="col">: </tspan><tspan class="dot">..... </tspan><tspan class="val">2</tspan></tspan>
 </text>
-<line x1="24" y1="548" x2="1016" y2="548" stroke="#30363D" stroke-width="1"/>
-<text x="24" y="564" class="mani">// I build software for real business problems —</text>
-<text x="24" y="584" class="mani">// business systems, AI automation, and integrations.</text>
-<text x="24" y="604" class="mani">// Built for East Africa. Designed to scale beyond it.</text>
-<text x="24" y="638"><tspan class="key">markcole.dev</tspan><tspan class="col">:~$ </tspan><tspan class="val">have a business problem? let's build the solution.</tspan><tspan class="cur"> ▊<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></tspan></text>
+<line x1="24" y1="648" x2="1016" y2="648" stroke="#30363D" stroke-width="1"/>
+<text x="24" y="664" class="mani">// I build software for real business problems —</text>
+<text x="24" y="684" class="mani">// business systems, AI automation, and integrations.</text>
+<text x="24" y="704" class="mani">// Built for East Africa. Designed to scale beyond it.</text>
+<text x="24" y="738"><tspan class="key">markcole.dev</tspan><tspan class="col">:~$ </tspan><tspan class="val">have a business problem? let's build the solution.</tspan><tspan class="cur"> ▊<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1.1s" repeatCount="indefinite"/></tspan></text>
 </svg>

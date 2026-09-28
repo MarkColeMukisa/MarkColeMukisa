@@ -2,6 +2,10 @@
 
 Edit the CONTENT section, then run:  python generate.py
 """
+import json
+import os
+import subprocess
+import urllib.request
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -51,7 +55,14 @@ ROWS = [
     ("Portfolio", "markcole.dev"),
     ("X", "@MarkColeMUKISA"),
     ("GitHub", "MarkColeMukisa"),
+    None,
+    "GitHub Stats",
+    ("Repos", "{repos}"),
+    ("Stars", "{stars}"),
+    ("Followers", "{followers}"),
 ]
+
+GITHUB_USER = "MarkColeMukisa"
 
 MANIFESTO = [
     "// I build software for real business problems —",
@@ -60,6 +71,54 @@ MANIFESTO = [
 ]
 
 PROMPT = ("markcole.dev", "have a business problem? let's build the solution.")
+
+# ------------------------------------------------------------ GITHUB STATS ---
+
+def github_token():
+    """GITHUB_TOKEN if set, else the logged-in gh CLI's token (needed to see private repos)."""
+    if token := os.environ.get("GITHUB_TOKEN"):
+        return token
+    try:
+        return subprocess.run(["gh", "auth", "token"], capture_output=True,
+                              text=True, check=True).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return None
+
+
+def github_stats(user):
+    """Repo/star/follower counts, including private repos when a token is available.
+
+    Stat rows read "—" if the API is unreachable.
+    """
+    token = github_token()
+
+    def get(path):
+        headers = {"Accept": "application/vnd.github+json"}
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
+        req = urllib.request.Request(f"https://api.github.com/{path}", headers=headers)
+        with urllib.request.urlopen(req, timeout=10) as r:
+            return json.load(r)
+
+    # With a token, list every repo the user owns (public + private);
+    # without one, only public repos are visible.
+    listing = ("user/repos?affiliation=owner&visibility=all" if token
+               else f"users/{user}/repos?type=owner")
+    try:
+        profile = get(f"users/{user}")
+        count = stars = 0
+        page = 1
+        while repos := get(f"{listing}&per_page=100&page={page}"):
+            count += len(repos)
+            stars += sum(r["stargazers_count"] for r in repos)
+            page += 1
+        if not token:
+            print("warning: no GitHub token found, counting public repos only")
+        return dict(repos=count, stars=stars, followers=profile["followers"])
+    except Exception as e:
+        print(f"warning: GitHub stats unavailable ({e})")
+        return dict(repos="—", stars="—", followers="—")
+
 
 # ----------------------------------------------------------------- THEMES ---
 
@@ -103,9 +162,11 @@ def info(key, value):
             f'<tspan class="val">{escape(value)}</tspan>')
 
 
-def build(name, t):
+def build(name, t, stats):
     info_lines = [heading(HANDLE, cursor=True)]
     for row in ROWS:
+        if isinstance(row, tuple):
+            row = (row[0], row[1].format(**stats))
         if row is None:
             info_lines.append("")
         elif isinstance(row, str):
@@ -179,5 +240,6 @@ def build(name, t):
 
 
 if __name__ == "__main__":
+    stats = github_stats(GITHUB_USER)
     for theme_name, theme in THEMES.items():
-        build(theme_name, theme)
+        build(theme_name, theme, stats)
